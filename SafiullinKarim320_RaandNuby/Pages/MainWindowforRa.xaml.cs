@@ -12,19 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using SafiullinKarim320_RaandNuby.DB;
 
-namespace SafiullinKarim320_RaandNuby
+namespace SafiullinKarim320_RaandNuby.Pages
 {
     /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
+    /// Логика взаимодействия для MainWindowforRa.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainWindowforRa : Page
     {
-        public MainWindow()
+        public MainWindowforRa()
         {
             InitializeComponent();
-            NavFr.NavigationService.Navigate(new Pages.AuthorizationPage());
         }
     }
 }
