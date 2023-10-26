@@ -77,7 +77,7 @@ namespace SafiullinKarim320_RaandNuby.Pages
             if(RaOrNubyCb.SelectedIndex == 1)
             {
                 NavigationService.Navigate(new MainWindowforRa());
-                MessageBox.Show("А вот вам и красавчик Ра!!");
+                MessageBox.Show("А вот вам и красавчик Ра!!"); 
             }
         }
     }
