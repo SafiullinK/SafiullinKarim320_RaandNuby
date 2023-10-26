@@ -8,7 +8,124 @@
       d:DesignHeight="450" d:DesignWidth="800"
       Title="MainWindowforNuby">
 
-    <Grid>
+    <Grid Background="PeachPuff">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="5" 
+   Grid.RowSpan="1"
+   Grid.ColumnSpan="3"
+   Text="Информация о Нуби"
+   TextWrapping="Wrap"
+   FontSize="20"
+   FontWeight="DemiBold"
+   HorizontalAlignment="Center"
+   VerticalAlignment="Center"/>
+        <TextBlock FontSize="18" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Фильтрация:</TextBlock>
+        <TextBox Name ="FiltrTb" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Height="30"  VerticalAlignment="Center" TextChanged="FiltrTb_TextChanged">
+        </TextBox>
+        <TextBlock FontSize="18" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center">Кого хотите увидеть :</TextBlock>
+        <ComboBox Grid.Column="3" Grid.ColumnSpan="2" Height="30" Name="RaOrNubyCb" SelectionChanged="RaOrNubyCb_SelectionChanged">
+            <ComboBoxItem>
+                <TextBlock Text="Нуби" FontSize="18"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock Text="Нуби" FontSize="18"/>
+            </ComboBoxItem>
+        </ComboBox>
+
+        <TextBlock Text="Описание"
+   Grid.Row="2"
+   Name="LastName"
+   HorizontalAlignment="Right"
+   VerticalAlignment="Center"
+   TextWrapping="Wrap"
+   FontSize="20"
+   FontWeight="DemiBold"/>
+        <TextBox Grid.ColumnSpan="2"
+ Grid.Column="1"
+ Grid.Row="2"
+Grid.RowSpan="2"
+ Margin="10"
+                
+ x:Name="deystv"
+ BorderThickness="2"/>
+        <Button Name="AddImage" 
+                FontSize="16" 
+                Grid.Row="4" Grid.Column="1" 
+                Grid.ColumnSpan="2" 
+                Content=" Добавить изображение" 
+                Click="AddImage_Click"/>
+        <Image Name="TestImage" 
+               Grid.Column="1" 
+               Grid.Row="5" 
+               Grid.ColumnSpan="2" 
+               Grid.RowSpan="2"/>
+        <Button Name="AddNuby" 
+                FontSize="16" 
+                Height="30" 
+                Grid.Row="6" 
+                Grid.Column="3" 
+                Grid.ColumnSpan="2" 
+                Width="200" Content=" Добавить Нуби" Click="AddNuby_Click" 
+                 />
+        <Button Name="AddRa" 
+        FontSize="16" 
+        Height="30" 
+        Grid.Row="6" 
+        Grid.Column="6" 
+        Grid.ColumnSpan="2" 
+        Width="200" Content=" Добавить Ра =>" Click="AddRa_Click"  
+         />
         
+
+
+
+        <ListView Grid.Column="4"
+  x:Name="NubyLv"
+  Grid.ColumnSpan="4"
+  Grid.Row="2"
+  Grid.RowSpan="4"
+  ItemsSource="{Binding Nuby}" >
+            <ListView.View>
+                <GridView>
+                    <GridView.Columns>
+                        <GridViewColumn Header="Фото" Width="150">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <StackPanel>
+                                        <Image Source="{Binding Image}"/>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Описание" Width="250">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <TextBlock Text="{Binding deystv}"/>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView.Columns>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Page>
