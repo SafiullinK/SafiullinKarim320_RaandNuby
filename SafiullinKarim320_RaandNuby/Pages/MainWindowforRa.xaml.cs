@@ -67,5 +67,14 @@ namespace SafiullinKarim320_RaandNuby.Pages
             RaLv.ItemsSource = new List<Kotenok_Ra>(Connection.raAndNubyEntities.Kotenok_Ra.ToList());
 
         }
+
+        private void RaOrNubyCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (RaOrNubyCb.SelectedIndex == 1)
+            {
+                NavigationService.Navigate(new MainWindowforNuby());
+                MessageBox.Show("А вот вам и красавчик Нуби!!");
+            }
+        }
     }
 }

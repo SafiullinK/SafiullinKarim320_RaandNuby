@@ -47,7 +47,7 @@
                 <TextBlock Text="Нуби" FontSize="18"/>
             </ComboBoxItem>
             <ComboBoxItem>
-                <TextBlock Text="Нуби" FontSize="18"/>
+                <TextBlock Text="Ра" FontSize="18"/>
             </ComboBoxItem>
         </ComboBox>
 

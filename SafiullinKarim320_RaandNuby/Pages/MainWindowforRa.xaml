@@ -85,6 +85,15 @@ Grid.RowSpan="2"
         <TextBlock FontSize="18" Grid.Row="1" Grid.Column="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center">Фильтрация: </TextBlock>
         <TextBox Name ="FiltrTb" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2" Height="30"  VerticalAlignment="Center" TextChanged="FiltrTb_TextChanged">
             </TextBox>
+        <TextBlock FontSize="18" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Center" VerticalAlignment="Center">Кого хотите увидеть :</TextBlock>
+        <ComboBox Grid.Column="3" Grid.ColumnSpan="2" Height="30" Name="RaOrNubyCb" SelectionChanged="RaOrNubyCb_SelectionChanged">
+            <ComboBoxItem>
+                <TextBlock Text="Ра" FontSize="18"/>
+            </ComboBoxItem>
+            <ComboBoxItem>
+                <TextBlock Text="Нуби" FontSize="18"/>
+            </ComboBoxItem>
+        </ComboBox>
 
 
 

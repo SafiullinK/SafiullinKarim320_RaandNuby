@@ -67,16 +67,17 @@ namespace SafiullinKarim320_RaandNuby.Pages
         private void FiltrTb_TextChanged(object sender, TextChangedEventArgs e)
         {
                 if(FiltrTb.Text.Length > 0)
-                NubyLv.ItemsSource = Connection.raAndNubyEntities.Kotenok_Ra.Where(i => i.deystv.Contains(FiltrTb.Text.Trim())).ToList();
+                NubyLv.ItemsSource = Connection.raAndNubyEntities.Sobachka_Nuby.Where(i => i.deystv.Contains(FiltrTb.Text.Trim())).ToList();
                 else
                 NubyLv.ItemsSource = new List<Sobachka_Nuby>(Connection.raAndNubyEntities.Sobachka_Nuby.ToList());
         }
 
         private void RaOrNubyCb_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if(RaOrNubyCb.SelectedIndex == 0)
+            if(RaOrNubyCb.SelectedIndex == 1)
             {
-               MessageBox.Show("Кто это")
+                NavigationService.Navigate(new MainWindowforRa());
+                MessageBox.Show("А вот вам и красавчик Ра!!");
             }
         }
     }
